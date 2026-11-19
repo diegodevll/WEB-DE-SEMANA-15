@@ -1,0 +1,260 @@
+
+Nosotros · HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIOD GAMES - Acerca de Nosotros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ 
+    <header>
+        <img src="img/logo.png" alt="Logo RIOD GAMES" class="header-logo">
+        <h1>RIOD GAMES</h1>
+    </header>
+ 
+    <button type="button" class="hamburguesa" id="btnMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+ 
+    <nav class="menu" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="listado.html">Catálogo</a>
+        <a href="detalle.html">Ficha Técnica</a>
+        <a href="registro.html">Registro</a>
+        <a href="nosotros.html" class="active">Nosotros</a>
+    </nav>
+ 
+    <main>
+ 
+        <!-- 1. PORTADA CON FONDO ANIMADO -->
+        <section class="hero-animated-section">
+            <div class="hero-glass-card">
+                <h2>Conoce a RIOD GAMES</h2>
+                <p>
+                    <strong>RIOD GAMES</strong> es un prototipo interactivo desarrollado en la asignatura de desarrollo web.
+                    Nace como respuesta a la fragmentación de tiendas y plataformas en el mundo de los videojuegos:
+                    un solo lugar para toda tu colección, digital y física.
+                </p>
+                <div class="hero-buttons">
+                    <a href="listado.html" class="btn-primary"><i class="fa-solid fa-table-list"></i> Ver el Catálogo</a>
+                    <a href="#equipo" class="btn-secondary"><i class="fa-solid fa-users"></i> Conocer al Equipo</a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- 2. RIOD GAMES EN NÚMEROS -->
+        <section class="platforms-bar-section">
+            <h3>RIOD GAMES en Números</h3>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <i class="fa-solid fa-users platform-icon-brand"></i>
+                    <span><span id="stat-integrantes">5</span> Integrantes</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-file-code platform-icon-brand"></i>
+                    <span>5 Páginas</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-gamepad platform-icon-brand"></i>
+                    <span><span id="stat-juegos">10</span> Juegos</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-display platform-icon-brand"></i>
+                    <span>6 Plataformas</span>
+                </div>
+            </div>
+        </section>
+ 
+        <section>
+            <h2>Nuestra Esencia</h2>
+            <p>
+                El propósito principal es proporcionar un espacio centralizado donde cada jugador pueda consolidar
+                su catálogo digital y físico sin depender de las limitaciones de tiendas exclusivas.
+            </p>
+ 
+            <div class="grid-caracteristicas">
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h4>Misión</h4>
+                    <p>Brindar a los jugadores una interfaz limpia, ligera e independiente para organizar su colección sin importar la plataforma de origen.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h4>Visión</h4>
+                    <p>Ser un referente académico de arquitectura web limpia, con metadatos, tráileres interactivos y formularios intuitivos para la comunidad <em>gamer</em>.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h4>Valores</h4>
+                    <p>Trabajo en equipo, orden, accesibilidad y mejora continua en cada versión del proyecto.</p>
+                </article>
+            </div>
+        </section>
+ 
+        <section>
+            <h3>¿Qué problema resolvemos?</h3>
+            <div class="grid-estados">
+                <div class="status-badge status-abandonado">
+                    <strong><i class="fa-solid fa-triangle-exclamation"></i> El problema</strong>
+                    <span>Los juegos están repartidos entre Steam, Epic, PlayStation, Xbox, Nintendo y copias físicas.</span>
+                </div>
+                <div class="status-badge status-progreso">
+                    <strong><i class="fa-solid fa-lightbulb"></i> La idea</strong>
+                    <span>Una bitácora única donde registras y consultas todo tu catálogo.</span>
+                </div>
+                <div class="status-badge status-completado">
+                    <strong><i class="fa-solid fa-circle-check"></i> El resultado</strong>
+                    <span>Menos tiempo buscando y más tiempo jugando tu backlog.</span>
+                </div>
+            </div>
+        </section>
+ 
+        <section>
+            <h3>Tecnologías y Estándares Web Aplicados</h3>
+            <p>Este sitio fue construido con estándares modernos de desarrollo Front-End:</p>
+ 
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <i class="fa-brands fa-html5 platform-icon-brand"></i>
+                    <span>HTML5 Semántico</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-brands fa-css3-alt platform-icon-brand"></i>
+                    <span>CSS3 &amp; Keyframes</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-mobile-screen-button platform-icon-brand"></i>
+                    <span>Mobile First &amp; RWD</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-border-all platform-icon-brand"></i>
+                    <span>CSS Grid &amp; Flexbox</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-brands fa-font-awesome platform-icon-brand"></i>
+                    <span>Font Awesome</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-brands fa-youtube platform-icon-brand"></i>
+                    <span>Videos Integrados</span>
+                </div>
+            </div>
+        </section>
+ 
+        <section>
+            <h3>Cómo lo construimos</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Etapa</th>
+                            <th>Qué hicimos</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Estructura</strong></td>
+                            <td>Páginas HTML5 semánticas y navegación</td>
+                            <td><span class="badge badge-completado">Completado</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Diseño</strong></td>
+                            <td>Estilos globales, tarjetas y animaciones CSS</td>
+                            <td><span class="badge badge-completado">Completado</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Contenido</strong></td>
+                            <td>Catálogo, fichas técnicas y tráileres</td>
+                            <td><span class="badge badge-completado">Completado</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Interactividad</strong></td>
+                            <td>Menú responsivo, ventanas flotantes, filtros y formulario con JavaScript</td>
+                            <td><span class="badge badge-completado">Completado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+ 
+        <section id="equipo">
+            <h3>Equipo de Desarrollo</h3>
+            <p>RIOD GAMES fue desarrollado de manera colaborativa por nuestro equipo de ingeniería web. Haz clic en una tarjeta para ver más detalles.</p>
+ 
+            <div class="team-grid">
+                <div class="team-card" data-indice="0">
+                    <div class="card-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <h4>JANAMPA JAULIS DIEGO</h4>
+                    <p class="role-badge">Arquitectura Web &amp; Coordinación</p>
+                </div>
+                <div class="team-card" data-indice="1">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h4>JIMENEZ MORENO SEBASTIAN</h4>
+                    <p class="role-badge">Diseño CSS &amp; Estilos Globales</p>
+                </div>
+                <div class="team-card" data-indice="2">
+                    <div class="card-icon"><i class="fa-solid fa-film"></i></div>
+                    <h4>LLANQUE VERASTEGUI AYRTON</h4>
+                    <p class="role-badge">Ficha Técnica &amp; Multimedia</p>
+                </div>
+                <div class="team-card" data-indice="3">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h4>CALDERON HUAMAN ABEL</h4>
+                    <p class="role-badge">Formularios &amp; UI</p>
+                </div>
+                <div class="team-card" data-indice="4">
+                    <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <h4>ITALO ALCEDO ASCA</h4>
+                    <p class="role-badge">QA &amp; Documentación</p>
+                </div>
+            </div>
+        </section>
+ 
+        <section>
+            <h3>Preguntas Frecuentes</h3>
+            <details>
+                <summary><strong>¿RIOD GAMES guarda mis juegos en un servidor?</strong></summary>
+                <p>Por ahora es un prototipo académico: el registro guarda los juegos solo en la memoria de la página y se vacía al recargar.</p>
+            </details>
+            <details>
+                <summary><strong>¿Qué plataformas puedo registrar?</strong></summary>
+                <p>Steam, Epic Games, PlayStation, Xbox, Nintendo y copias físicas.</p>
+            </details>
+            <details>
+                <summary><strong>¿Se ve bien en el celular?</strong></summary>
+                <p>Sí, el diseño es Mobile First y se adapta a pantallas pequeñas y grandes.</p>
+            </details>
+        </section>
+ 
+        <section>
+            <h3>Contacto y Retroalimentación</h3>
+            <p>Como proyecto académico en constante evolución, valoramos tus opiniones para futuras mejoras.</p>
+            <p style="text-align: center; margin-top: 15px;">
+                <a href="mailto:contacto@questlogui.edu.pe" class="btn-primary">
+                    <i class="fa-solid fa-envelope"></i> Escribir a contacto@questlogui.edu.pe
+                </a>
+            </p>
+        </section>
+ 
+    </main>
+ 
+    <dialog class="ventana" id="ventana" aria-labelledby="tituloVentana">
+        <div class="contenido" style="text-align: center;">
+            <button type="button" class="cerrar" data-cerrar aria-label="Cerrar ventana">✕</button>
+            <h3 id="tituloVentana">Título</h3>
+            <div id="cuerpoVentana"></div>
+            <p style="margin-top: 15px;"><button type="button" class="btn-primary" data-cerrar>Cerrar</button></p>
+        </div>
+    </dialog>
+ 
+    <footer>
+        <p>&copy; 2026 RIOD GAMES - Proyecto Académico. Todos los derechos reservados.</p>
+    </footer>
+ 
+    <script src="JS/app.js"></script>
+ 
+</body>
+</html>

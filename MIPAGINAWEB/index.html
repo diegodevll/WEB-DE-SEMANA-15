@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RIOD GAMES: bitacora unificada para organizar tu coleccion de videojuegos de cualquier plataforma.">
+    <title>RIOD GAMES - Inicio</title>
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Estilos del proyecto -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo RIOD GAMES" class="header-logo">
+        <h1>RIOD GAMES</h1>
+    </header>
+
+    <button type="button" class="hamburguesa" id="btnMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+
+    <nav class="menu" id="menu">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="listado.html">Catalogo</a>
+        <a href="detalle.html">Ficha Tecnica</a>
+        <a href="registro.html">Registro</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main>
+
+        
+        <section class="hero-animated-section">
+            <div class="hero-glass-card">
+                <h2>Bienvenido a tu Bitacora Unificada</h2>
+
+                <div class="banner-container">
+                    <img src="img/banner.png" alt="Banner RIOD GAMES" class="banner-img">
+                </div>
+
+                <p>
+                    <strong>RIOD GAMES</strong> es la plataforma definitiva diseñada para ayudarte a gestionar, organizar y llevar el control de tu coleccion personal de videojuegos sin importar en que tienda o consola los hayas adquirido.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="registro.html" class="btn-primary"><i class="fa-solid fa-plus"></i> Registra tu primer juego</a>
+                    <a href="listado.html" class="btn-secondary"><i class="fa-solid fa-table-list"></i> Explora el Catalogo</a>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="platforms-bar-section">
+            <h3>Filtrar por Plataforma y Tienda</h3>
+            <div class="platforms-grid">
+                <a href="listado.html" class="platform-card">
+                    <i class="fa-brands fa-xbox platform-icon-brand"></i>
+                    <span>Xbox</span>
+                </a>
+                <a href="listado.html" class="platform-card">
+                    <i class="fa-solid fa-gamepad platform-icon-brand"></i>
+                    <span>Switch</span>
+                </a>
+                <a href="listado.html" class="platform-card">
+                    <i class="fa-brands fa-steam platform-icon-brand"></i>
+                    <span>Steam</span>
+                </a>
+                <a href="listado.html" class="platform-card">
+                    <i class="fa-brands fa-playstation platform-icon-brand"></i>
+                    <span>PSN</span>
+                </a>
+                <a href="listado.html" class="platform-card">
+                    <i class="fa-solid fa-bolt platform-icon-brand"></i>
+                    <span>Epic Games</span>
+                </a>
+                <a href="listado.html" class="platform-card">
+                    <i class="fa-solid fa-box-open platform-icon-brand"></i>
+                    <span>Copia Fisica</span>
+                </a>
+            </div>
+        </section>
+
+        
+        <section>
+            <h3><i class="fa-solid fa-hand"></i> Interactua con RIOD GAMES</h3>
+            <div class="grid-caracteristicas">
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-comment"></i></div>
+                    <h4>Saludanos</h4>
+                    <p id="saludo">Presiona el boton y cuentanos como te llamas.</p>
+                    <p style="margin-top: 12px;">
+                        <button type="button" class="btn-primary" id="btnSaludar"><i class="fa-solid fa-hand"></i> Saludar</button>
+                    </p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h4>Tus horas de juego</h4>
+                    <p id="resultado-horas">Calcula cuantas horas por dia juegas.</p>
+                    <p style="margin-top: 12px;">
+                        <button type="button" class="btn-primary" id="btnHoras"><i class="fa-solid fa-calculator"></i> Calcular</button>
+                    </p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h4>Consejo gamer</h4>
+                    <p id="consejo-texto">Presiona el boton para recibir un consejo al azar.</p>
+                    <p style="margin-top: 12px;">
+                        <button type="button" class="btn-secondary" id="btnConsejo"><i class="fa-solid fa-dice"></i> Mostrar consejo</button>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+       
+        <section>
+            <h3>Empieza en 3 pasos</h3>
+            <p>Tener tu coleccion ordenada es mas facil de lo que parece:</p>
+
+            <div class="grid-caracteristicas">
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                    <h4>1. Registra</h4>
+                    <p>Agrega el titulo, la plataforma y la fecha en que lo adquiriste.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h4>2. Clasifica</h4>
+                    <p>Marcalo como pendiente, en progreso, completado o abandonado.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-table-list"></i></div>
+                    <h4>3. Consulta</h4>
+                    <p>Revisa tu catalogo y abre la ficha tecnica de cada juego.</p>
+                </article>
+            </div>
+        </section>
+
+        
+        <section>
+            <h3>¿Que puedes hacer en RIOD GAMES?</h3>
+            <p>Explora las funcionalidades principales diseñadas para mejorar tu gestion de juegos:</p>
+
+            <div class="grid-caracteristicas">
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h4>Unificar tu Biblioteca</h4>
+                    <p>Registra titulos de Steam, Epic Games, PlayStation, Xbox, Nintendo y copias fisicas en una sola interfaz.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <h4>Gestionar tu Backlog</h4>
+                    <p>Organiza los juegos que tienes pendientes por jugar, en progreso activo o ya completados.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h4>Consultar Fichas Tecnicas</h4>
+                    <p>Revisa datos clave, plataformas disponibles, clasificacion ESRB y traileres oficiales integrados.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4>Estadisticas de Juego</h4>
+                    <p>Analiza el tiempo invertido y el porcentaje de avance detallado en cada uno de tus titulos predilectos.</p>
+                </article>
+            </div>
+        </section>
+
+        
+        <section>
+            <h3>Juegos Destacados</h3>
+            <p>Un adelanto de lo que encontraras en el catalogo:</p>
+
+            <div class="grid-caracteristicas">
+                <article class="card-feature" style="text-align: center;">
+                    <img src="img/Cyberpunk_2077.png" alt="Cyberpunk 2077" class="img-circular">
+                    <h4 style="margin-top: 12px;">Cyberpunk 2077</h4>
+                    <p>RPG / Accion</p>
+                    <p style="margin: 10px 0;"><span class="badge badge-progreso">En Progreso</span></p>
+                    <a href="detalle.html" class="btn-tabla">Ver Ficha Tecnica</a>
+                </article>
+                <article class="card-feature" style="text-align: center;">
+                    <img src="img/zelda.png" alt="The Legend of Zelda: Tears of the Kingdom" class="img-circular">
+                    <h4 style="margin-top: 12px;">Zelda: Tears of the Kingdom</h4>
+                    <p>Aventura / Accion</p>
+                    <p style="margin: 10px 0;"><span class="badge badge-completado">Completado</span></p>
+                    <a href="detalle.html" class="btn-tabla">Ver Ficha Tecnica</a>
+                </article>
+                <article class="card-feature" style="text-align: center;">
+                    <img src="img/eldenring.png" alt="Elden Ring" class="img-circular">
+                    <h4 style="margin-top: 12px;">Elden Ring</h4>
+                    <p>Soulslike / RPG</p>
+                    <p style="margin: 10px 0;"><span class="badge badge-backlog">Pendiente (Backlog)</span></p>
+                    <a href="detalle.html" class="btn-tabla">Ver Ficha Tecnica</a>
+                </article>
+            </div>
+        </section>
+
+        
+        <section>
+            <h3>Estado de tu Coleccion</h3>
+            <p>Clasifica tus juegos segun tu progreso actual para priorizar tu tiempo libre de forma eficiente:</p>
+
+            <div class="grid-estados">
+                <div class="status-badge status-progreso">
+                    <strong><i class="fa-solid fa-play"></i> En Progreso</strong>
+                    <span>Titulos a los que estas jugando actualmente.</span>
+                </div>
+                <div class="status-badge status-backlog">
+                    <strong><i class="fa-solid fa-hourglass-half"></i> Pendientes (Backlog)</strong>
+                    <span>Juegos comprados que estan esperando su turno.</span>
+                </div>
+                <div class="status-badge status-completado">
+                    <strong><i class="fa-solid fa-trophy"></i> Completados</strong>
+                    <span>Titulos finalizados con o sin el 100% de logros.</span>
+                </div>
+                <div class="status-badge status-abandonado">
+                    <strong><i class="fa-solid fa-pause"></i> Abandonados</strong>
+                    <span>Juegos pausados de forma indefinida.</span>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="platforms-bar-section">
+            <h3>¿Listo para ordenar tu coleccion?</h3>
+            <p>Empieza hoy y ten todos tus videojuegos en un solo lugar.</p>
+            <div class="hero-buttons">
+                <a href="registro.html" class="btn-primary"><i class="fa-solid fa-plus"></i> Registrar un juego</a>
+                <a href="nosotros.html" class="btn-secondary"><i class="fa-solid fa-users"></i> Conoce al equipo</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RIOD GAMES - Proyecto Academico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="JS/app.js"></script>
+
+</body>
+</html>

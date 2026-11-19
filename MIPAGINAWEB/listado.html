@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo general de videojuegos de RIOD GAMES con plataforma, género y estado en tu biblioteca.">
+    <title>RIOD GAMES - Catálogo de Juegos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo RIOD GAMES" class="header-logo">
+        <h1>RIOD GAMES</h1>
+    </header>
+
+    <button type="button" class="hamburguesa" id="btnMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+
+    <nav class="menu" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="listado.html" class="active">Catálogo</a>
+        <a href="detalle.html">Ficha Técnica</a>
+        <a href="registro.html">Registro</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2><i class="fa-solid fa-table-list"></i> Catálogo General de Videojuegos</h2>
+            <p>Explora los títulos disponibles en nuestro sistema y accede a su información detallada.</p>
+            <p style="margin-top: 15px;">
+                <a href="registro.html" class="btn-primary"><i class="fa-solid fa-plus"></i> Registrar un juego nuevo</a>
+            </p>
+        </section>
+
+        <section class="platforms-bar-section">
+            <h3>Resumen de tu Colección</h3>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <i class="fa-solid fa-gamepad platform-icon-brand"></i>
+                    <span><span id="total-juegos">10</span> Juegos en total</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-play platform-icon-brand"></i>
+                    <span><span id="total-progreso">4</span> En Progreso</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-trophy platform-icon-brand"></i>
+                    <span><span id="total-completado">3</span> Completados (<span id="porcentaje-completado">30%</span>)</span>
+                </div>
+                <div class="platform-card">
+                    <i class="fa-solid fa-hourglass-half platform-icon-brand"></i>
+                    <span><span id="total-backlog">3</span> Pendientes</span>
+                </div>
+            </div>
+            <p id="info-plataformas" style="margin-top: 12px;"></p>
+            <p id="info-maximo"></p>
+        </section>
+
+        <section>
+            <h3>Listado de Juegos</h3>
+
+            <div class="filtros">
+                <div>
+                    <label for="buscador"><i class="fa-solid fa-magnifying-glass"></i> Buscar por título</label>
+                    <input type="text" id="buscador" placeholder="Ej. Elden">
+                </div>
+                <div>
+                    <label for="filtro-estado"><i class="fa-solid fa-filter"></i> Filtrar por estado</label>
+                    <select id="filtro-estado">
+                        <option value="todos">Todos</option>
+                        <option value="progreso">En Progreso</option>
+                        <option value="completado">Completado</option>
+                        <option value="backlog">Pendiente (Backlog)</option>
+                    </select>
+                </div>
+                <div style="flex: 0 0 auto; min-width: 0;">
+                    <button type="button" class="btn-secondary" id="btnLimpiarFiltros"><i class="fa-solid fa-eraser"></i> Limpiar</button>
+                </div>
+            </div>
+            <p id="contador-resultados" style="color: var(--primary); font-weight: bold;"></p>
+
+            <div class="table-container">
+                <table id="tabla-juegos">
+                    <caption>Videojuegos registrados en la bitácora de RIOD GAMES</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Carátula</th>
+                            <th scope="col">Título</th>
+                            <th scope="col"><i class="fa-solid fa-display"></i> Plataforma</th>
+                            <th scope="col"><i class="fa-solid fa-tag"></i> Género</th>
+                            <th scope="col">Estado en Biblioteca</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <p id="sin-resultados" class="mensaje-vacio oculto">No se encontraron juegos con esos filtros.</p>
+        </section>
+
+        <section>
+            <h3>¿Qué significa cada estado?</h3>
+            <div class="grid-estados">
+                <div class="status-badge status-progreso">
+                    <strong><span class="badge badge-progreso">En Progreso</span></strong>
+                    <span>Títulos a los que estás jugando actualmente.</span>
+                </div>
+                <div class="status-badge status-backlog">
+                    <strong><span class="badge badge-backlog">Pendiente (Backlog)</span></strong>
+                    <span>Juegos comprados que esperan su turno.</span>
+                </div>
+                <div class="status-badge status-completado">
+                    <strong><span class="badge badge-completado">Completado</span></strong>
+                    <span>Títulos finalizados con o sin el 100% de logros.</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <dialog class="ventana" id="ventana" aria-labelledby="tituloVentana">
+        <div class="contenido">
+            <button type="button" class="cerrar" data-cerrar aria-label="Cerrar ventana">✕</button>
+            <h3 id="tituloVentana">Título</h3>
+            <div id="cuerpoVentana"></div>
+            <div class="hero-buttons" style="justify-content: flex-start;">
+                <a href="detalle.html" id="enlaceVentana" class="btn-primary"><i class="fa-solid fa-circle-info"></i> Ver ficha completa</a>
+                <button type="button" class="btn-secondary" data-cerrar>Cerrar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2026 RIOD GAMES - Proyecto Académico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="JS/app.js"></script>
+
+</body>
+</html>

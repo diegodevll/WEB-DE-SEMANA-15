@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registra un nuevo videojuego en tu bitacora de RIOD GAMES: plataforma, fecha, horas, calificacion y estado.">
+    <title>RIOD GAMES - Registro de Juego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ 
+    <header>
+        <img src="img/logo.png" alt="Logo RIOD GAMES" class="header-logo">
+        <h1>RIOD GAMES</h1>
+    </header>
+ 
+    <button type="button" class="hamburguesa" id="btnMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+ 
+    <nav class="menu" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="listado.html">Catalogo</a>
+        <a href="detalle.html">Ficha Tecnica</a>
+        <a href="registro.html" class="active">Registro</a>
+        <a href="nosotros.html">Nosotros</a>
+    </nav>
+ 
+    <main>
+ 
+        <section>
+            <h2><i class="fa-solid fa-pen-to-square"></i> Registrar Nuevo Videojuego a la Bitacora</h2>
+            <p>Completa el siguiente formulario para añadir un nuevo titulo a tu coleccion personal.</p>
+            <p>Los campos marcados con <span style="color: var(--primary-active); font-weight: bold;">*</span> son obligatorios.</p>
+        </section>
+
+        <section>
+            <form id="form-registro" action="#" method="get" autocomplete="off" novalidate>
+ 
+                
+                <fieldset style="border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+                    <legend style="color: var(--primary); font-weight: bold; padding: 0 8px;">
+                        <i class="fa-solid fa-gamepad"></i> Datos del Juego
+                    </legend>
+ 
+                    <label for="titulo">Título del Videojuego <span style="color: var(--primary-active);">*</span></label>
+                    <input type="text" id="titulo" name="titulo" list="lista-juegos"
+                           placeholder="Ej. Elden Ring" minlength="2" maxlength="50"
+                           aria-describedby="ayuda-titulo" required>
+                    <datalist id="lista-juegos">
+                        <option value="Cyberpunk 2077"></option>
+                        <option value="The Legend of Zelda: Tears of the Kingdom"></option>
+                        <option value="Elden Ring"></option>
+                        <option value="God of War Ragnarök"></option>
+                        <option value="Red Dead Redemption 2"></option>
+                        <option value="Hollow Knight"></option>
+                        <option value="EA SPORTS FC 24"></option>
+                        <option value="Grand Theft Auto V"></option>
+                        <option value="Minecraft"></option>
+                        <option value="Resident Evil 4 Remake"></option>
+                    </datalist>
+                    <small id="ayuda-titulo" style="color: var(--text-muted);">Entre 2 y 50 caracteres. Puedes elegir uno de la lista o escribir el tuyo.</small>
+                    <br><small id="contador-titulo" style="color: var(--primary);">0/50 caracteres</small>
+                    <small class="msg-error" id="error-titulo"></small>
+ 
+                    <label for="genero">Genero</label>
+                    <select id="genero" name="genero">
+                        <option value="" selected>-- Selecciona un genero --</option>
+                        <option value="rpg">RPG</option>
+                        <option value="accion">Accion</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="mundo-abierto">Mundo Abierto</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="terror">Survival Horror</option>
+                        <option value="indie">Indie / Metroidvania</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </fieldset>
+ 
+ 
+                <fieldset style="border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+                    <legend style="color: var(--primary); font-weight: bold; padding: 0 8px;">
+                        <i class="fa-solid fa-cart-shopping"></i> Adquisicion
+                    </legend>
+ 
+                    <label for="plataforma">Plataforma de Adquisicion <span style="color: var(--primary-active);">*</span></label>
+                    <select id="plataforma" name="plataforma" required>
+                        <option value="" disabled selected>-- Selecciona una plataforma --</option>
+                        <option value="steam">Steam (PC)</option>
+                        <option value="epic">Epic Games Store</option>
+                        <option value="playstation">PlayStation Network</option>
+                        <option value="xbox">Xbox Game Pass / Store</option>
+                        <option value="nintendo">Nintendo eShop</option>
+                        <option value="fisico">Copia Fisica</option>
+                    </select>
+                    <small id="msg-plataforma" style="color: var(--primary);"></small>
+                    <small class="msg-error" id="error-plataforma"></small>
+ 
+                    <label for="fecha">Fecha de Adquisicion <span style="color: var(--primary-active);">*</span></label>
+                    <input type="date" id="fecha" name="fecha" min="1990-01-01" required>
+                    <small class="msg-error" id="error-fecha"></small>
+ 
+                    <label for="precio">Precio pagado (S/)</label>
+                    <input type="number" id="precio" name="precio" min="0" max="9999" step="0.01" placeholder="Ej. 149.90">
+                    <small class="msg-error" id="error-precio"></small>
+                </fieldset>
+ 
+                
+                <fieldset style="border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+                    <legend style="color: var(--primary); font-weight: bold; padding: 0 8px;">
+                        <i class="fa-solid fa-chart-line"></i> Progreso
+                    </legend>
+ 
+                    <label for="estado">Estado del Juego <span style="color: var(--primary-active);">*</span></label>
+                    <select id="estado" name="estado" required>
+                        <option value="pendiente">Pendiente (Backlog)</option>
+                        <option value="jugando">En Progreso</option>
+                        <option value="completado">Completado</option>
+                        <option value="abandonado">Abandonado</option>
+                    </select>
+ 
+                    <label for="horas">Horas Estimadas / Invertidas</label>
+                    <input type="number" id="horas" name="horas" min="0" max="9999" step="1" placeholder="Ej. 45" value="0">
+                    <small id="msg-costo" style="color: var(--primary);"></small>
+                    <small class="msg-error" id="error-horas"></small>
+ 
+                    <label for="rating">Calificacion Personal (1 al 10)</label>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <input type="range" id="rating" name="rating" min="1" max="10" value="8"
+                               style="flex: 1;">
+                        <output id="rating-valor" for="rating"
+                                style="color: var(--primary); font-weight: bold; font-size: 1.3rem; min-width: 30px; text-align: center;">8</output>
+                        <span id="rating-texto" style="color: var(--text-muted);">Buena</span>
+                    </div>
+ 
+                    <label for="logros" id="grupo-logros" class="oculto" style="margin-top: 15px;">
+                        <input type="checkbox" id="logros" name="logros" value="si">
+                        Complete el 100% de los logros
+                    </label>
+                </fieldset>
+ 
+                
+                <fieldset style="border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; margin-bottom: 15px;">
+                    <legend style="color: var(--primary); font-weight: bold; padding: 0 8px;">
+                        <i class="fa-solid fa-comment-dots"></i> Notas o Reseña Personal
+                    </legend>
+ 
+                    <label for="notas">Tus impresiones</label>
+                    <textarea id="notas" name="notas" rows="5" maxlength="500"
+                              placeholder="Escribe tus impresiones o avances..."
+                              aria-describedby="ayuda-notas"></textarea>
+                    <small id="ayuda-notas" style="color: var(--text-muted);">Maximo 500 caracteres.</small>
+                </fieldset>
+ 
+                <!-- Botones -->
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <input type="submit" value="Guardar en Mi Bitacora" class="btn-primary" style="flex: 2;">
+                    <input type="reset" value="Limpiar Formulario" id="btnLimpiar" class="btn-secondary" style="flex: 1; text-align: center;">
+                </div>
+            </form>
+        </section>
+ 
+        
+        <section>
+            <h3><i class="fa-solid fa-clipboard-list"></i> Juegos registrados en esta sesion (<span id="contador-registrados">0</span>)</h3>
+            <p>Esta lista vive en la memoria de la pagina: se vacia al recargar.</p>
+            <p id="msg-exito" class="mensaje-ok"></p>
+            <ul id="lista-registrados" class="lista-registrados"></ul>
+            <p id="vacio-registrados" class="mensaje-vacio">Aun no registraste ningun juego.</p>
+            <p id="msg-lista" class="msg-error"></p>
+ 
+            <div class="grid-estados">
+                <div class="status-badge">
+                    <strong>Total de horas</strong>
+                    <span id="total-horas">0</span>
+                </div>
+                <div class="status-badge">
+                    <strong>Mejor calificado</strong>
+                    <span id="mejor-juego">—</span>
+                </div>
+                <div class="status-badge">
+                    <strong>Completados</strong>
+                    <span id="total-completados">0 de 0</span>
+                </div>
+            </div>
+ 
+            <p style="margin-top: 15px;">Progreso de completados: <strong id="porcentaje-progreso">0%</strong></p>
+            <div class="barra"><div class="barra-relleno" id="barra-progreso"></div></div>
+ 
+            <div class="hero-buttons" style="justify-content: flex-start;">
+                <button type="button" class="btn-secondary" id="btnQuitarUltimo"><i class="fa-solid fa-rotate-left"></i> Quitar ultimo</button>
+                <button type="button" class="btn-secondary" id="btnVaciar"><i class="fa-solid fa-trash"></i> Vaciar lista</button>
+            </div>
+        </section>
+ 
+        
+        <section>
+            <h3><i class="fa-solid fa-lightbulb"></i> Consejos para tu Bitacora</h3>
+            <div class="grid-caracteristicas">
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <h4>Usa el Backlog</h4>
+                    <p>Marca como pendiente todo lo que aun no empiezas para priorizar tu tiempo.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+                    <h4>Sé sincero al calificar</h4>
+                    <p>Una nota honesta te ayuda a decidir que jugar despues.</p>
+                </article>
+                <article class="card-feature">
+                    <div class="card-icon"><i class="fa-solid fa-table-list"></i></div>
+                    <h4>Revisa el catalogo</h4>
+                    <p>Antes de registrar, mira si el juego ya esta en el <a href="listado.html" style="color: var(--primary);">catalogo</a>.</p>
+                </article>
+            </div>
+        </section>
+ 
+    </main>
+ 
+        
+    <dialog class="ventana" id="ventana" aria-labelledby="tituloVentana">
+        <div class="contenido">
+            <button type="button" class="cerrar" data-cerrar aria-label="Cerrar ventana">✕</button>
+            <h3 id="tituloVentana">Titulo</h3>
+            <div id="cuerpoVentana"></div>
+            <div class="hero-buttons" style="justify-content: flex-start;">
+                <button type="button" class="btn-primary" data-cerrar>Entendido</button>
+                <a href="listado.html" class="btn-secondary">Ir al catalogo</a>
+            </div>
+        </div>
+    </dialog>
+ 
+    <footer>
+        <p>&copy; 2026 RIOD GAMES - Proyecto Academico. Todos los derechos reservados.</p>
+    </footer>
+ 
+    <script src="JS/app.js"></script>
+ 
+</body>
+</html>
